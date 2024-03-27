@@ -5,29 +5,29 @@ import { lusitana } from '@/app/ui/fonts';
 import Link from 'next/link';
 import { ReactElement, JSXElementConstructor, ReactNode, ReactPortal, PromiseLikeOfReactNode, Key } from 'react';
 
-async function getData() {
-  const res = await fetch('http://localhost:8000/api/posts')
-  // The return value is *not* serialized
-  // You can return Date, Map, Set, etc.
+// async function getData() {
+//   const res = await fetch('http://localhost:8000/api/posts')
+//   // The return value is *not* serialized
+//   // You can return Date, Map, Set, etc.
  
-  if (!res.ok) {
-    // This will activate the closest `error.js` Error Boundary
-    throw new Error('Failed to fetch data')
-  }
+//   if (!res.ok) {
+//     // This will activate the closest `error.js` Error Boundary
+//     throw new Error('Failed to fetch data')
+//   }
  
-  return res.json()
-}
+//   return res.json()
+// }
  
  
 export default async function Page() {
-  const posts = await getData()
+  // const posts = await getData()
   return (
     <main>
       <h1 className={`${lusitana.className} mb-4 text-xl md:text-2xl`}>
         Dashboard
       </h1>
 
-      <div className="container" style={{ marginTop: '80px' }}>
+      {/* <div className="container" style={{ marginTop: '80px' }}>
                 <div className="row">
                     <div className="col-md-12">
                         <div className="card border-0 shadow-sm rounded-3">
@@ -66,7 +66,7 @@ export default async function Page() {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> */}
 
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
         {/* <Card title="Collected" value={totalPaidInvoices} type="collected" /> */}
